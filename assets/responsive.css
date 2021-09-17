@@ -1,0 +1,66 @@
+/* PC: width >= 1024px */
+@media only screen and (min-width: 46.1875em) {
+  
+}
+
+
+/* tablet & mobile: width < 1024px */
+@media only screen and (max-width: 63.9375em) {
+  .navbar .menu-toggler {
+    display: block;
+  }
+
+  .navbar .navbar-menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--secondary-color);
+    top: 0;
+    right: -100%;
+    max-width: 400px;
+    padding: 80px 50px;
+    transition: 0.3 linear;
+  }
+
+  .navbar .navbar-menu a {
+    display: block;
+    font-size: 2.5rem;
+    margin: 30px 0;
+  }
+
+  .sticky .navbar-menu {
+    background-color: var(--secondary-color);
+  }
+
+  .navbar .navbar-menu.active {
+    right: 0;
+  }
+
+  .navbar .menu-toggler.active span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 4px;
+  }
+  
+  .navbar .menu-toggler.active span:nth-child(3) {
+    opacity: 0;
+  }
+
+  .navbar .menu-toggler.active span:nth-child(2) {
+    transform: rotate(45deg);
+    bottom: 5px;
+  }
+
+}
+
+
+
+/* tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  
+}
+
+
+/* mobile: width < 739px */
+@media only screen and (max-width: 46.1875em) {
+  
+}
