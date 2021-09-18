@@ -65,16 +65,74 @@ html {
 }
 
 
-/* main */
+/* loading page */
+.outer {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
+.outer div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #FCFFA6;
+  border-radius: 10px;
+}
+
+.outer div:nth-child(1) {
+  animation: a1 2s ease-in-out infinite;
+}
+
+.outer div:nth-child(2) {
+  animation: a2 2s ease-in-out infinite;
+}
+
+.outer div:nth-child(3) {
+  animation: a3 2s ease-in-out infinite;
+}
+
+.outer div:nth-child(4) {
+  animation: a4 2s ease-in-out infinite;
+}
+
+@keyframes a1 {
+  50% {transform: translateX(-100%) rotate(90deg); border-color: #C1FFD7}
+  100% {transform: translateX(0) rotate(180deg);}
+}
+@keyframes a2 {
+  50% {transform: translateY(100%) rotate(90deg); border-color: #F037A5}
+  100% {transform: translateY(0) rotate(180deg);}
+}
+@keyframes a3 {
+  50% {transform: translateX(100%) rotate(90deg); border-color: #CAB8FF}
+  100% {transform: translateX(0) rotate(180deg);}
+}
+@keyframes a4 {
+  50% {transform: translateY(-100%) rotate(90deg); border-color: #EB92BE}
+  100% {transform: translateY(0) rotate(180deg);}
+}
+
+
+/* main */
+#main {
+  opacity: 0;
+  display: none;
+  transition: opacity 1s ease-in;
+}
 
 /* Navbar */
 .navbar {
   position: fixed;
   background-color: transparent;
-  width: 100%;
   padding: 15px 0;
   top: 0;
+  left: 5px;
+  right: 5px;
+  border-radius: 10px;
   z-index: 999;
   transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
@@ -159,6 +217,7 @@ html {
   justify-content: center;
   height: 100%;
   text-align: center;
+  background-color: rgba(0,0,0,0.5);
 }
 
 #home .content {
