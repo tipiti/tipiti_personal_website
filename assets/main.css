@@ -12,8 +12,6 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
 	border: 0;
 	font-size: 100%;
 	vertical-align: baseline;
@@ -62,6 +60,70 @@ html {
   --secondary-color: rgba(22, 33, 62, 1);
   --ligher-color: rgba(15, 52, 96, 1);
   --red-color: rgba(233, 69, 96, 1)
+}
+.dark-theme {
+  --dark-theme: #282A36;
+  background-color: var(--dark-theme);
+  color: #fff;
+}
+
+
+section:nth-child(n+3) {
+  margin-top: -7rem;
+  padding: 10rem 30px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: var(--ligher-color);
+  bottom: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 6px;
+  background-color: var(--red-color);
+  bottom: -66px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 9px;
+}
+
+#more {
+  display: none;
+}
+
+.readmore-btn {
+  font-family: "Barlow", Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  border: none;
+  background-color: transparent;
+  color: var(--red-color);
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.readmore-btn:hover {
+  font-weight: 500;
+  color: var(--red-color);
+  cursor: pointer;
 }
 
 
@@ -141,9 +203,6 @@ html {
   max-width: 1300px;
   margin: auto;
   padding: 0 40px;
-}
-
-.navbar .inner-width {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -177,8 +236,12 @@ html {
   background-color: #fff;
   margin: 6px 0;
   position: relative;
-  transition: 0.3s linear;
+  transition: 0.1s linear;
   border-radius: 2px;
+}
+
+.navbar .menu-toggler span:last-child {
+  transition: none;
 }
 
 .navbar .navbar-menu a {
@@ -240,7 +303,7 @@ html {
 
 @keyframes textanim {
   0% {
-    content: "Hello...!";
+    content: "Hiii...!";
   }
   25% {
     content: "I'm Tipiti";
@@ -269,7 +332,7 @@ html {
 
 #home .button a {
   display: inline-block;
-  margin: 30px 30px;
+  margin: 30px 30px 0;
   color: #fff;
   font-size: 1.5rem;
   font-weight: 500;
@@ -285,4 +348,58 @@ html {
   color: var(--red-color);
   border-color: var(--secondary-color) ;
   font-weight: 700;
+}
+
+/* about */
+#about .about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#about .about-content .about__picture {
+  background: url(../assets/img/logo.jpg) center / cover no-repeat;
+  width: 50vw;
+  max-width: 200px;
+  height: 50vw;
+  max-height: 200px;
+  clip-path: circle(50% at 50% 50%);
+  margin: 50px;
+}
+
+#about .about-content .about__text {
+  flex: 1 60%;
+}
+
+#about .about-content .about__text h2 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+#about .about-content .about__text p {
+  font-size: 2rem;
+  text-align: justify;
+  line-height: 1.4;
+  margin-top: 15px;
+}
+
+#about .about-content .about__text h3 {
+  margin: 10px 0;
+  color: var(--secondary-color);
+  font-size: 2.2rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+#about .about-content .about__text h3 span:nth-child(1)::after,
+#about .about-content .about__text h3 span:nth-child(2)::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  background-color: var(--red-color);
+  border-radius: 50%;
+  margin: 0 1rem;
 }
