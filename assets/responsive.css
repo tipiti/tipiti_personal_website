@@ -128,4 +128,14 @@
     bottom: -82px;  
   }
 
+  /* about */
+  #about .about-content .about__text h2 {
+    line-height: 1;
+    text-align: center;
+  }
+
+  #about .about-content .about__text p {
+    text-align: left;
+  }
+
 }
