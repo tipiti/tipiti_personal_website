@@ -1,5 +1,5 @@
 const loader = document.querySelector('.outer')
-const main = document.querySelector('#main')
+const main = document.querySelector('#hero')
 
 function init() {
   setTimeout(() => {
@@ -8,8 +8,8 @@ function init() {
     loader.style.overflow = 'hidden'
 
     main.style.display = 'block'
-    setTimeout(() => (main.style.opacity = 1), 50)
-  }, 4000);
+    setTimeout(() => (main.style.opacity = 1), 10)
+  }, 2000);
 }
 
 init();
