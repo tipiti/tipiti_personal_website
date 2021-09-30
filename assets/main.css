@@ -9,7 +9,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+figure, figcaption, footer, giheader, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	border: 0;
@@ -76,10 +76,16 @@ html {
 }
 
 
-section:nth-child(n+3) {
-  margin-top: -7rem;
-  padding: 10rem 30px;
+section:nth-child(3) {
+  margin-top: -5rem;
+  padding: 8rem 30px;
 }
+
+section:nth-child(n+4) {
+  margin-top: -12rem;
+  padding: 8rem 30px;
+}
+
 
 .section-title {
   text-align: center;
@@ -193,7 +199,7 @@ section:nth-child(n+3) {
   opacity: 0;
   display: none;
   transition: opacity 1s ease-in;
-  min-width: 250px;
+  min-width: 315px;
 }
 
 /* Navbar */
@@ -417,6 +423,108 @@ section:nth-child(n+3) {
   margin: 0 1rem;
 }
 
+/* contact */
+.contact-infor {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-infor .item {
+  width: calc(100%/3 - 20px);
+  height: 160px;
+  background-color: var(--secondary-color);
+  color: #FFF;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s linear;
+  padding: 30px;
+  font-size: 2.4rem;
+  margin: 10px 0;
+}
+
+.contact-infor .item:hover {
+  opacity: 0.8;
+  color: var(--red-color);
+}
+
+.contact-infor .item:hover i {
+  animation: xoay 0.5s linear;
+}
+
+@keyframes xoay {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contact-infor i {
+  display: block;
+  font-size: 3rem;
+  line-height: 1.6;
+  height: 60px;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  background-color: var(--secondary-color);
+  border: none;
+  outline: none;
+  padding: 20px;
+  color: #FFF;
+  border-radius: 10px;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+  opacity: 0.8;
+}
+
+.contact-form__name,
+.contact-form__email {
+  max-width: calc(50% - 20px);
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  max-height: 250px;
+  resize: vertical;
+}
+
+.contact-form .btn {
+  width: 130px;
+  height: 30px;
+  padding: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: transparent;
+  color: var(--red-color);
+  border: 2px solid;
+  transition: 0.2s linear;
+  font-style: italic;
+  margin-left: auto;
+}
+
+.contact-form .btn:hover {
+  border: 2px solid var(--red-color);
+  cursor: pointer;
+  opacity: 1.8;
+  color: #fff;
+  background-color: var(--red-color);
+}
 
 /* footer */
 footer {
