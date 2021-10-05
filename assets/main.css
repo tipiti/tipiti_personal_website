@@ -1,24 +1,11 @@
 /* reset CSS */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, giheader, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, giheader, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
@@ -103,7 +90,7 @@ section:nth-child(n+4) {
   width: 80px;
   height: 2px;
   background-color: var(--ligher-color);
-  bottom: -5px;
+  bottom: -7px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -114,7 +101,7 @@ section:nth-child(n+4) {
   width: 10px;
   height: 6px;
   background-color: var(--red-color);
-  bottom: -7px;
+  bottom: -9px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 9px;
@@ -126,7 +113,7 @@ section:nth-child(n+4) {
 
 .readmore-btn {
   font-family: "Barlow", Helvetica, sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 300;
   border: none;
   background-color: transparent;
@@ -283,6 +270,7 @@ section:nth-child(n+4) {
   text-shadow: none;
 }
 
+
 /* home */
 #home {
   height: 100vh;
@@ -368,6 +356,7 @@ section:nth-child(n+4) {
   border-color: rgba(22, 33, 62, 1);
 }
 
+
 /* about */
 #about .about-content {
   display: flex;
@@ -398,7 +387,7 @@ section:nth-child(n+4) {
 }
 
 #about .about-content .about__text p {
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-align: justify;
   line-height: 1.4;
   margin-top: 15px;
@@ -422,6 +411,7 @@ section:nth-child(n+4) {
   border-radius: 50%;
   margin: 0 1rem;
 }
+
 
 /* contact */
 .contact-infor {
@@ -447,6 +437,7 @@ section:nth-child(n+4) {
 .contact-infor .item:hover {
   opacity: 0.8;
   color: var(--red-color);
+  scale: 1.2;
 }
 
 .contact-infor .item:hover i {
@@ -525,6 +516,7 @@ section:nth-child(n+4) {
   color: #fff;
   background-color: var(--red-color);
 }
+
 
 /* footer */
 footer {
